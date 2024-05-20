@@ -1,0 +1,187 @@
+// Header部分SCSS
+body {
+    header {
+        background-color: white;
+        box-shadow: 0px 5px 10px -3px rgba(4, 4, 83, 0.2);
+
+        display: flex;
+
+        position: sticky;
+        top: 0;
+        z-index: 10;
+
+        section.logo {
+            width: 90px;
+            height: 40px;
+            margin: 28px 15vw;
+        }
+        nav {
+            display: flex;
+            margin: 32px;
+            ul {
+                display: flex;
+                gap: 40px;
+                li {
+                    padding: 4px 8px;
+                    list-style: none;
+                    position: relative;
+                    a {
+                        color: black;
+                        text-decoration: none;
+                        transition: all 0.2s ease;
+                    }
+                    .border {
+                        position: absolute;
+                        width: 8px;
+                        height: 8px;
+                    }
+                    .vec1 {
+                        top: 0;
+                        left: 0;
+                        border-top: 1px solid #ffffff;
+                        border-left: 1px solid #ffffff;
+                    }
+                    .vec2 {
+                        top: 0;
+                        right: 0;
+                        border-top: 1px solid #ffffff;
+                        border-right: 1px solid #ffffff;
+                    }
+                    .vec3 {
+                        bottom: 0;
+                        right: 0;
+                        border-bottom: 1px solid #ffffff;
+                        border-right: 1px solid #ffffff;
+                    }
+                    .vec4 {
+                        bottom: 0;
+                        left: 0;
+                        border-bottom: 1px solid #ffffff;
+                        border-left: 1px solid #ffffff;
+                    }
+                    &:hover{
+                        .vec1 {
+                            border-top: 1px solid #919191;
+                            border-left: 1px solid #919191;
+                        }
+                        .vec2 {
+                            border-top: 1px solid #919191;
+                            border-right: 1px solid #919191;
+                        }
+                        .vec3 {
+                            border-bottom: 1px solid #919191;
+                            border-right: 1px solid #919191;
+                        }
+                        .vec4 {
+                            border-bottom: 1px solid #919191;
+                            border-left: 1px solid #919191;
+                        }
+                    }
+                }
+                #currPage {
+                    a {
+                        // font-size: 1.1em;
+                        font-weight: bold;
+                    }
+                    .vec1 {
+                        top: 0;
+                        left: 0;
+                        border-top: 1px solid #919191;
+                        border-left: 1px solid #919191;
+                    }
+                    .vec2 {
+                        top: 0;
+                        right: 0;
+                        border-top: 1px solid #919191;
+                        border-right: 1px solid #919191;
+                    }
+                    .vec3 {
+                        bottom: 0;
+                        right: 0;
+                        border-bottom: 1px solid #919191;
+                        border-right: 1px solid #919191;
+                    }
+                    .vec4 {
+                        bottom: 0;
+                        left: 0;
+                        border-bottom: 1px solid #919191;
+                        border-left: 1px solid #919191;
+                    }
+                }
+            }
+        }
+        .btn {
+            width: 56px;
+            height: 56px;
+            display: none;
+            padding-top: 7px;
+            padding-right: 3px;
+            .hamburger {
+                font-size: 40px;
+                &:active {
+                    .filter {
+                        display: block;
+                    }
+                }
+            }
+            .close {
+                font-size: 40px;
+            }
+        }
+    }
+    .filter {
+        display: none;
+        position: fixed;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 9;
+    }
+}
+
+@media screen and (max-width: 985px) {
+    body {
+        header {
+            position: relative;
+            position: sticky;
+            nav {
+                width: 100vw;
+                background-color: #ffffff;
+                position: absolute;
+                margin: 0;
+                top: 96px;
+                display: flex;
+                justify-content: center;
+                border-top: 1px solid rgba(204, 204, 204, 0.5);
+
+                ul {
+                    margin: 20px 0;
+                    li {
+                        text-align: center;
+                        a {
+                            font-size: 20px;
+                        }
+                    }
+                    
+                }
+            }
+            align-items: center;
+            .btn {
+                display: flex;
+                margin-left: auto;
+                margin-right: 10vw;
+	            background-color: #ffffff;
+                border-radius: 8px;
+	            border: 0;
+                &:hover {
+                    cursor: pointer;
+                }
+                .close {
+                    display: none;/* 初始隱藏的樣式（關閉圖示） */
+                }
+            }
+        }
+    }
+}
