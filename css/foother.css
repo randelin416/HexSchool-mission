@@ -1,0 +1,82 @@
+
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-lg.png?raw=true");
+    background-size: cover;
+    gap: 100px;
+  }
+  
+  .qiote{
+    width: 30%;
+    & .logo{
+      width: 120px;
+    }
+    & img{
+      width: 100%;
+      padding-bottom: 24px;
+    }
+    & .guide{
+      font-size: 20px;
+      line-height: 30px;
+      padding-bottom: 24px;
+      color: #3B3B3B;
+    }
+    & span{
+      color: #919191;
+    }
+  }
+  
+  .content{
+    width: 100%;
+    margin-top: 80px;
+    & img{
+      text-align: center;
+      padding-left: 24px;
+    }
+    & li{
+      width: 306px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+      border-radius: 8px;
+      border: 1px solid #C1C1C1;
+      background-color: #FFFFFF;
+    }
+    & p{
+      font-size: 20px;
+      line-height: 30px;
+      margin-left: 8px;
+    }
+    & .list{
+      font-weight: 700;
+      background-color: #000000;
+      color: #FFFFFF;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .footer{
+      flex-direction: column;
+      gap: 0px;
+      background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-sm.png?raw=true");
+    }
+    .qiote{
+      width: 100%;
+      text-align: center;
+      margin-top: 40px;
+      & .logo{
+        display: inline-block;
+      }
+    }
+    .guide{
+      text-align: center;
+    }
+    .content{
+      display: block;
+      width: 100%;
+      margin-top: 40px;
+    }
+}
