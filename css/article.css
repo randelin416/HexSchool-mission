@@ -2,6 +2,12 @@ body {
   font-family: "Noto Sans", sans-serif;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -22,7 +28,7 @@ img {
 }
 
 .work {
-  width: 1300px;
+  width: 1296px;
   gap: 80px 24px;
 }
 
@@ -38,11 +44,10 @@ img {
 
 .work_name {
   color: #3b3b3b;
-  font-weight: 700px;
+  font-weight: 700;
   font-size: 28px;
   line-height: 1.2;
-  font-weight: bold;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .work_intro {
