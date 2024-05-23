@@ -33,6 +33,7 @@ img {
 }
 
 .work_image {
+  width: 636px;
   outline: 1px solid #f1f1f1;
   border-radius: 8px;
   margin-bottom: 16px;
